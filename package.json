@@ -16,7 +16,7 @@
         "lint:fix": "npm run el:fix && npm run sl:fix"
     },
     "dependencies": {
-        "@ovchinnikov-lxs/ui-kit": "2.2.11",
+        "@ovchinnikov-lxs/ui-kit": "2.2.25",
         "normalize.css": "^8.0.1"
     },
     "devDependencies": {
