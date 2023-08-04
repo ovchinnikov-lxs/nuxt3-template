@@ -1,8 +1,8 @@
 <template>
     <div class="TheFooter">
         <div :class="$style.wrapper">
-            <NuxtLink :to="$routes.index">index</NuxtLink>
-            <NuxtLink :to="$routes.second">second</NuxtLink>
+            <NuxtLink to="/">index</NuxtLink>
+            <NuxtLink to="/second">second</NuxtLink>
         </div>
     </div>
 </template>
@@ -13,7 +13,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    column-gap: mul($unit, 12);
-    padding: mul($unit, 4);
+    column-gap: calc(var(--ui-unit) * 12);
+    padding: calc(var(--ui-unit) * 4);
 }
 </style>

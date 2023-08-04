@@ -2,22 +2,35 @@
 import stylelint from 'vite-plugin-stylelint';
 
 export default defineNuxtConfig({
-    typescript: {
-        strict: true,
-    },
-
     app: {
         head: {
             charset: 'utf-16',
             viewport: 'width=device-width, initial-scale=1',
-            title: 'Nuxt3 template',
             meta: [
-                { name: 'description', content: 'Nuxt3 template' },
+                { name: 'description', content: 'Nuxt 3 template' },
             ],
         },
     },
 
     css: ['~/assets/scss/common/_bundle.scss'],
+
+    devtools: { enabled: true },
+
+    modules: [
+        '@nuxtjs/svg-sprite',
+    ],
+
+    router: {
+        options: {
+            linkActiveClass: '--is-active-link',
+            linkExactActiveClass: '--is-exact-link',
+        },
+    },
+
+    typescript: {
+        strict: true,
+        typeCheck: true,
+    },
 
     vite: {
         plugins: [
@@ -28,7 +41,6 @@ export default defineNuxtConfig({
                 scss: {
                     additionalData: `
                     @use "~/assets/scss/shared/_functions.scss" as *;
-                    @use "~/assets/scss/shared/_variables.scss" as *;
                     @use "~/assets/scss/shared/_mixins.scss" as *;
                     `,
                 },
